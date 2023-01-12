@@ -9,11 +9,9 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let newArr;
-  arr.foreach((element) =>
-    newArr.push(element + 1) );
-  // return newArr;
-  // Solution code here...
+  let newArr = [];
+  arr.forEach(element => newArr.push (element + 1));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +23,9 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+  let newArr2 = [];
+  arr.forEach(element => newArr2.push (element + '!'));
+  return newArr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +37,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  let newArr3 = [];
+  arr.forEach(element => newArr3.push(element.toUpperCase()));
+  return newArr3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,17 +53,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  let allCaps = word.touppercase() + '!';
-  console.log()
+  let allCaps = word.toUpperCase() + '!';
+  console.log(allCaps, 'allcaps');
   return allCaps;
   // Solution code here...
 };
 
 const speaker = (words, callback) => {
   const newArray = [];
-  words.foreach(element => {
-    newArray.push(callback(element));
-  });
+  words.forEach(element => newArray.push(callback(element)));
   return newArray;
   // Solution code here...
 };
@@ -159,13 +159,13 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array with an exclamation point added to each value of the original array', () => {
     expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return an array of uppercase strings', () => {
     expect(allUpperCase(['hi', 'how', 'are', 'you'])).toStrictEqual(['HI', 'HOW', 'ARE', 'YOU']);
   });
@@ -184,7 +184,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
