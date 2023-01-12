@@ -37,7 +37,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  let newArr3 = [];
+  arr.forEach(element => newArr3.push(element.toUpperCase()));
+  return newArr3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,17 +53,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  let allCaps = word.touppercase() + '!';
-  console.log()
+  let allCaps = word.toUpperCase() + '!';
+  console.log(allCaps, 'allcaps');
   return allCaps;
   // Solution code here...
 };
 
 const speaker = (words, callback) => {
   const newArray = [];
-  words.foreach(element => {
-    newArray.push(callback(element));
-  });
+  words.forEach(element => newArray.push(callback(element)));
   return newArray;
   // Solution code here...
 };
@@ -165,26 +165,26 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return an array of uppercase strings', () => {
     expect(allUpperCase(['hi', 'how', 'are', 'you'])).toStrictEqual(['HI', 'HOW', 'ARE', 'YOU']);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
     expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
