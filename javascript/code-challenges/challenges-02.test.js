@@ -11,9 +11,8 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 const raisedToTheThird = (arr) => {
   let newArray1 = [];
   arr.forEach(element => newArray1.push(Math.pow(element, 3)));
-  console.log(newArray1);
+  // console.log(newArray1);
   return newArray1;
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,7 +22,9 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  // Solution code here...
+  let newArray2 = arr.map(element => (element + 1));
+  // console.log(newArray2);
+  return newArray2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,7 +34,8 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  // Solution code here...
+  let newArray3 = arr.map(element => (element + '?'));
+  return newArray3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -208,13 +210,13 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add one to all the numbers in the array', () => {
     expect(addOne([2, 3, 5, 11])).toStrictEqual([3, 4, 6, 12]);
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should add a question mark to the end of each string', () => {
     expect(addQuestion(['hello', '301', 'students'])).toStrictEqual(['hello?', '301?', 'students?']);
   });
