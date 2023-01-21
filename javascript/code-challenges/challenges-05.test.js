@@ -25,9 +25,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  let newArray2 = arr.reduce((a, b) => element + element );
-  console.log(arr.reduce((element) => element + element));
-  return newArray2;
+  // let newArray2 =
+  return arr.reduce((a, b) => a + b, 0);
+  // console.log(arr.reduce((a, b) => a + b));
+  // return newArray2;
 };
 
 /* ------------------------------------------------------------------------------------------------
