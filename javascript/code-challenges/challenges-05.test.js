@@ -13,7 +13,7 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   let newArray = people.map((element) =>element.firstName + ' ' + element.lastName);
-  console.log(newArray);
+  // console.log(newArray);
   return newArray;
 };
 
@@ -25,7 +25,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  arr.reduce
+  let newArray2 = arr.reduce((a, b) => element + element );
+  console.log(arr.reduce((element) => element + element));
+  return newArray2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -290,7 +292,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
