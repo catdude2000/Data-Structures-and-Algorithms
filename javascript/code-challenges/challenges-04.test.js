@@ -128,9 +128,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  return arr.sort((a, b) => {
-    a.toLowerCase() > b.toLowerCase() ? -1 : a.toLowerCase() < b.toLowerCase() ? 1 : 0;
-  });
+  return arr.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : a.toLowerCase() < b.toLowerCase() ? -1 : 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
