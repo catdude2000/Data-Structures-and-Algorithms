@@ -118,13 +118,10 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  for (let i = 0; i < arr.length; i++){
-    houses.push(Object.values(arr[i]).includes('house:'));
-  }
-  for (const [key, value] of Object.entries(obj)){
-    return (`${key}: ${value}`);
-  }
-  return houses;
+
+  houses.push(arr.map(ele => ele.house));
+
+  return houses[0];
 };
 
 /*------------------------------------------------------------------------------------------------
