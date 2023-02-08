@@ -9,7 +9,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   let splitString = str.split('');
-  console.log(splitString.length, 'spltstr');
+  for (let i=0; i< 11; i++) {
+    splitString.splice(0, 1);
+  }
+  console.log(splitString, 'spltstr');
   return splitString;
 }
 
