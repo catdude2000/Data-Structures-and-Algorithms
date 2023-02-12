@@ -9,11 +9,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   let splitString = str.split('');
-  for (let i=0; i< 11; i++) {
-    splitString.splice(0, 1);
-  }
-  console.log(splitString, 'spltstr');
-  return splitString;
+  return splitString.splice(-10, 10);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,7 +27,17 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  // Solution code here...
+  var largestNumber = [];
+  for(let i = 0; i < matrix.length; i++) {
+    for(let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] >= matrix[i][j+1]) {
+        largestNumber.push(matrix[i][j]);
+      }
+    }
+
+  }
+  // console.log(largestNumber, 'largestrnum');
+  return largestNumber[0];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,7 +55,14 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  let sum = [];
+  for(let i = 0; i < matrix.length; i++) {
+    for(let j = 0; j < matrix[i].length; j++) {
+      sum.push(matrix[i][j]);
+    }
+  }
+  // console.log(sum.reduce((a, b) => a + b, 0), 'finsum');
+  return sum.reduce((a, b) => a + b, 0);
 };
 
 
@@ -76,8 +89,17 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let sums1 = [];
+  for(let i = 0; i < hoursOpen.length; i++) {
+    let sums2 = [];
+    for(let j = 0; j < stores.length; j++) {
+      sums2.push(stores[j][i]);
+    }
+    sums2.reduce((a, b) => a + b, 0);
+    sums1.push(sums2.reduce((a, b) => a + b, 0));
+  }
+  // console.log(sums1, 'sum');
+  return sums1;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +113,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let dataHourArr = [];
+  hours.forEach((a, b) => {
+    dataHourArr.push({sales: `${data[b]} cookies`, time: a});
+  });
+  return dataHourArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +142,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr.filter(errands =>
+    errands.store === 'Pet store')[0].items.filter(items => items.name === 'Treats')[0].quantity;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -228,26 +256,26 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the max value', () => {
     expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(24);
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return the total sum', () => {
     expect(totalSum([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(81);
     expect(totalSum([])).toStrictEqual(0);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should add the hourly totals array', () => {
     expect(grandTotal(cookieStores)).toStrictEqual([88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should create an object of data for each store', () => {
     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
       { sales: '88 cookies', time: '9 a.m.' },
@@ -268,7 +296,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the number 24', () => {
     expect(howManyTreats(errands)).toStrictEqual(24);
   });
