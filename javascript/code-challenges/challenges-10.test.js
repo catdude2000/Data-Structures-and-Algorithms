@@ -90,7 +90,6 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   let sums1 = [];
-
   for(let i = 0; i < hoursOpen.length; i++) {
     let sums2 = [];
     for(let j = 0; j < stores.length; j++) {
@@ -99,9 +98,8 @@ const grandTotal = (stores) => {
     sums2.reduce((a, b) => a + b, 0);
     sums1.push(sums2.reduce((a, b) => a + b, 0));
   }
-  console.log(sums1, 'sum');
+  // console.log(sums1, 'sum');
   return sums1;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,7 +113,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let dataHourArr = [];
+  hours.forEach((a, b) => {
+    dataHourArr.push({sales: `${data[b]} cookies`, time: a});
+  });
+  return dataHourArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,7 +142,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr.filter(errands =>
+    errands.store === 'Pet store')[0].items.filter(items => items.name === 'Treats')[0].quantity;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -271,7 +275,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should create an object of data for each store', () => {
     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
       { sales: '88 cookies', time: '9 a.m.' },
@@ -292,7 +296,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the number 24', () => {
     expect(howManyTreats(errands)).toStrictEqual(24);
   });
