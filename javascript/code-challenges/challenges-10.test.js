@@ -10,7 +10,6 @@ Write a function named returnTen, takes in a string and uses split and splice to
 function returnTen(str){
   let splitString = str.split('');
   return splitString.splice(-10, 10);
-
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +27,17 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  // Solution code here...
+  var largestNumber = [];
+  for(let i = 0; i < matrix.length; i++) {
+    for(let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] >= matrix[i][j+1]) {
+        largestNumber.push(matrix[i][j]);
+      }
+    }
+
+  }
+  console.log(largestNumber, 'largestrnum');
+  return largestNumber[0];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -225,7 +234,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the max value', () => {
     expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(24);
   });
