@@ -36,7 +36,7 @@ const findMax = (matrix) => {
     }
 
   }
-  console.log(largestNumber, 'largestrnum');
+  // console.log(largestNumber, 'largestrnum');
   return largestNumber[0];
 };
 
@@ -61,7 +61,7 @@ const totalSum = (matrix) => {
       sum.push(matrix[i][j]);
     }
   }
-  console.log(sum.reduce((a, b) => a + b, 0), 'finsum');
+  // console.log(sum.reduce((a, b) => a + b, 0), 'finsum');
   return sum.reduce((a, b) => a + b, 0);
 };
 
@@ -89,7 +89,18 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
+  let sums1 = [];
+
+  for(let i = 0; i < hoursOpen.length; i++) {
+    let sums2 = [];
+    for(let j = 0; j < stores.length; j++) {
+      sums2.push(stores[j][i]);
+    }
+    sums2.reduce((a, b) => a + b, 0);
+    sums1.push(sums2.reduce((a, b) => a + b, 0));
+  }
+  console.log(sums1, 'sum');
+  return sums1;
 
 };
 
@@ -254,7 +265,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should add the hourly totals array', () => {
     expect(grandTotal(cookieStores)).toStrictEqual([88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]);
   });
