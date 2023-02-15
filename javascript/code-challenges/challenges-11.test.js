@@ -19,8 +19,9 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-  var result = Object.keys(obj).map((key, value) => [obj[value], obj[key]]);
-  return result;
+  return Object.entries(obj).map(entries => (
+    `<li>${entries[0]}: ${entries[1]}</li>`
+  ));
 }
 
 /* ------------------------------------------------------------------------------------------------
