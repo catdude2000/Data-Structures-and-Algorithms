@@ -32,7 +32,7 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
-  // Solution code here...
+  return /^[a-z]{5, 13}$/.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,7 +44,9 @@ If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
-  // Solution code here...
+  // console.log('true?', /^[A-Z]+[a-z]+[0-9]+/.test('Code301'));
+  return /^[A-Za-z]+[0-9]+/.test(string);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +136,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should validate a word between 5 and 10 characters', () => {
     expect(validateWord('Hello')).toBeTruthy();
     expect(validateWord('Bob')).toBeFalsy();
@@ -146,7 +148,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return true if a string has one or more word characters followed by one or more digits', () => {
     expect(hasNumber('Hell0')).toBeTruthy();
     expect(hasNumber('Bob')).toBeFalsy();
