@@ -13,8 +13,8 @@ const longestString = (arr) => {
       return a.length > b.length ? a : b;
     }
   );
-  console.log(longestString, 'longeststring');
-  console.log(arr.indexOf(longestString, 0), 'arraftertestreduce');
+  // console.log(longestString, 'longeststring');
+  // console.log(arr.indexOf(longestString, 0), 'arraftertestreduce');
   return arr.indexOf(longestString, 0);
 };
 
@@ -27,7 +27,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
+  let lettersArray = arr.map(ele => ele[0]);
+  return lettersArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -174,7 +175,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the first letter of each element of the array', () => {
     const words = ['apple', 'banana', 'cantaloupe'];
 
