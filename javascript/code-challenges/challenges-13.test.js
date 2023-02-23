@@ -7,13 +7,7 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-  let testArr = arr;
-  let longestString = testArr.reduce(
-    function (a,b) {
-      return a.length > b.length ? a : b;
-    }
-  );
-  // console.log(longestString, 'longeststring');
+  let longestString = arr.reduce((a, b) => a.length > b.length ? a : b, 0);
   // console.log(arr.indexOf(longestString, 0), 'arraftertestreduce');
   return arr.indexOf(longestString, 0);
 };
@@ -40,7 +34,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // return arr.filter(ele => ele.match(^/':)'))
+  console.log(arr.filter(ele => ele.match(':)'), 'filtered array'));
+  return arr.filter(ele => ele.match(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
