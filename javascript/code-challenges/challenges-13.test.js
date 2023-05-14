@@ -3,21 +3,16 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named longestString that takes in an array of strings and returns the index position of the longest string. 
+Write a function named longestString that takes in an array of strings and returns the index position of the longest string.
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// return arr.indexOf
-var longest = arr.reduce(
-  function (a, b) {
-    return a.length > b.length, 0;
-  }
-)
-// console.log(longest, 'longest');
-// console.log(arr, 'arr');
-return arr.indexOf(longest)
+  let longestString = arr.reduce((a, b) => a.length > b.length ? a : b, 0);
+  // console.log(arr.indexOf(longestString, 0), 'arraftertestreduce');
+  return arr.indexOf(longestString, 0);
 };
-  
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -28,6 +23,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   return arr.map(a => a[0]);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,7 +35,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  return arr.filter(ele => ele.includes(':)'));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,11 +48,13 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  let parseArr = arr.map(ele => ele.replace(/[()\s-]/g, ''));
+  return parseArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
+
 
 Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
 
@@ -67,7 +66,9 @@ const onlyOddChars = (str) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+
+CHALLENGE 6
+
 
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
@@ -184,7 +185,8 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
+
   test('It should return only the strings that contain smiley faces', () => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
@@ -195,7 +197,9 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+
+describe('Testing challenge 4', () => {
+
   test('It should return a standardized set of phone numbers', () => {
     const nums = ['(123) 456-7890', '(222) 222-2222'];
 
