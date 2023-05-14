@@ -14,6 +14,7 @@ var longest = arr.reduce(
   }
 )
 // console.log(longest, 'longest');
+
 // console.log(arr, 'arr');
 return arr.indexOf(longest)
 };
