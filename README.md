@@ -22,4 +22,4 @@ To run your tests
 
 Table of Contents
 
-1. [Challenge One](/home/catdude/projects/courses/code-401/data-structures-and-algorithms/javascript/code-challenges/CodeChallengeClass01-401JS/README.md/)
+1. [Challenge One](javascript/code-challenges/CodeChallengeClass01-401JS/README.md)
