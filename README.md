@@ -23,4 +23,5 @@ To run your tests
 Table of Contents
 
 1. [Challenge One](javascript/CC401Class01/README.md)
-1. [Challenge Two](javascript/CC401Class02/README.md)
+2. [Challenge Two](javascript/CC401Class02/README.md)
+3. [Challenge Three](javascript/CC401Class03/README.md)
