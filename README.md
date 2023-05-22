@@ -27,3 +27,4 @@ Table of Contents
 3. [Challenge Three](javascript/CC401Class03/README.md)
 4. []()
 5. [Challenge 5](javascript/CC401Class05/README.md)
+6. [Challenge 6](javascript/CC401Class06/README.md)
