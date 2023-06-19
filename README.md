@@ -22,11 +22,11 @@ To run your tests
 
 Table of Contents
 
-1. [Challenge One](javascript/CC401Class01/README.md)
-2. [Challenge Two](javascript/CC401Class02/README.md)
-3. [Challenge Three](javascript/CC401Class03/README.md)
-4.
-5. [Challenge Five](javascript/CC401Class05/README.md)
-6. [Challenge Six](javascript/CC401Class06/README.md)
-7. [Challenge Seven](javascript/CC401Class07/README.md)
-8. [Challenge Eight](javascript/CC401Class08/README.md)
+1. [Challenge One](javascript/)
+2. [Challenge Two](javascript/)
+3. [Challenge Three](javascript/)
+4. [Challenge Four](javascript/)
+5. [Challenge Five](javascript/)
+6. [Challenge Six](javascript/)
+7. [Challenge Seven](javascript/)
+8. [Challenge Eight](javascript/)
