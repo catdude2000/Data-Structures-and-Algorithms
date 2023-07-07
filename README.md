@@ -23,7 +23,7 @@ To run your tests
 Table of Contents
 
 1. [Challenge One](javascript/old401/CC401Class01/README.md)
-2. [Challenge Two](javascript/)
+2. [Challenge Two](javascript/old401/CC401Class02/README.md)
 3. [Challenge Three](javascript/)
 4. [Challenge Four](javascript/)
 5. [Challenge Five](javascript/)
