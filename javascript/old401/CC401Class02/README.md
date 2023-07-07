@@ -33,4 +33,4 @@ const pushMiddle = (arr, num) => {
   };
   console.log(newArr);
   return newArr;
-}
+}  
