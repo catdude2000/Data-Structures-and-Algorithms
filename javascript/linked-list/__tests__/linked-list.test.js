@@ -1,6 +1,6 @@
 'use strict';
 
-const { LinkedList } = require('./linkedList.js');
+const { LinkedList } = require('../linkedList.js');
 // "{ a } -> { b } -> { c } -> NULL"
 const dummyLL = {
   value: 'a',
