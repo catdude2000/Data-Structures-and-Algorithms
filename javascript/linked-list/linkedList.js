@@ -64,4 +64,43 @@ class LinkedList {
   }
 }
 
+
+
+
+
+// append
+// arguments: new value
+// adds a new node with the given value to the end of the list
+// - create a function that takes in a new value
+// - make a new node with the value argument
+// - traverse to the end of linke list
+// - end node.next will be the new node
+
+
+
+
+// insert before
+// arguments: value, new value
+// adds a new node with the given new value immediately before the first node that has the value specified
+// -assign node to temp var
+//- if heads not value start looping, if is value use insert
+// -check current.next.value
+// -when we find value insert the new node (temp is current.next, current.next is new node, new node.next is temp)
+//- return the list
+
+
+
+// insert after
+// arguments: value, new value
+// adds a new node with the given new value immediately after the first node that has the value specified
+
+
+
+
+
+
+
+
+
+
 module.exports = { LinkedList, Node };
