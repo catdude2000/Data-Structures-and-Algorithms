@@ -66,8 +66,6 @@ class LinkedList {
 
 
 
-
-
 // append
 // arguments: new value
 // adds a new node with the given value to the end of the list
@@ -75,6 +73,39 @@ class LinkedList {
 // - make a new node with the value argument
 // - traverse to the end of linke list
 // - end node.next will be the new node
+
+// const append = (newValue) => {
+//   const newNode = new Node(newValue);
+//   let current = this.head;
+//   while(current.next) {
+//     current = current.next;
+//   };
+//   current.next = newNode
+// };
+
+
+// const addToEnd = (newValue) => {
+//   var newEnd = new Node(newValue);
+//   if (head === null) {
+//     head = new Node(newValue);
+//     return;
+//   }
+//   newEnd.next = null;
+//   var last = head;
+//   while (last.next != null)
+//     last = last.next;
+//   last.next = newEnd;
+//   return;
+// }
+
+const addToEnd = (newValue) => {
+  let newEnd = new Node(newValue);
+  var current = this.head;
+  while (current) {
+    current = current.next
+  }
+   current.next = newEnd;
+}
 
 
 
@@ -88,6 +119,25 @@ class LinkedList {
 // -when we find value insert the new node (temp is current.next, current.next is new node, new node.next is temp)
 //- return the list
 
+const insertBefore = (value, newValue) => {
+  var newNode = new Node(newValue)
+  // let current = this.head;
+  if (head != value) {
+    while (current) {
+      current = current.next
+      if (current.next.value === value) {
+        let temp = current.next;
+        current.next = newNode;
+        newNode.next = temp;
+        // insert(newNode);
+      };
+    };
+  } else {insert(newValue)
+  };
+  return;
+}
+
+
 
 
 // insert after
@@ -99,5 +149,20 @@ class LinkedList {
 //- current.next is new node
 // -new node.next is temp
 //-return the list
+
+const insertAfter = (value, newValue) => {
+  let current = head;
+  var newNode = new Node(newValue);
+   while (current) {
+  if (head === value) {
+    current.next = newNode;
+  } else
+    {
+      current = current.next
+    }
+  }
+}
+
+
 
 module.exports = { LinkedList, Node };

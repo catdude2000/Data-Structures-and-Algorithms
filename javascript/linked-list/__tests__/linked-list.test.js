@@ -30,4 +30,18 @@ describe('linked list test suite', () => {
       '{ 1 } -> { a } -> { b } -> { c } -> NULL'
     );
   });
+  test('append can insert a node at the end of the list', () => {
+    //insert a node then check that the last node of the list matches a value
+    // insert it
+    // compare it to our expected toString value
+    const testLL = new LinkedList(dummyLL);
+    testLL.append('d')
+    expect(testLL.toString()).toEqual(
+      '{ a } -> { b } -> { c } -> { d } -> NULL'
+    );
+
+    //option 2--------------
+    //traverse list
+    // if current.next = null return current expect current.value to === the value we inserted
+  });
 });
