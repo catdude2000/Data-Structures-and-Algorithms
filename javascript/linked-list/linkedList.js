@@ -74,14 +74,14 @@ class LinkedList {
 // - traverse to the end of linke list
 // - end node.next will be the new node
 
-// const append = (newValue) => {
-//   const newNode = new Node(newValue);
-//   let current = this.head;
-//   while(current.next) {
-//     current = current.next;
-//   };
-//   current.next = newNode
-// };
+const append = (newValue) => {
+  const newNode = new Node(newValue);
+  let current = this.head;
+  while(current.next) {
+    current = current.next;
+  };
+  current.next = newNode
+};
 
 
 // const addToEnd = (newValue) => {
@@ -98,14 +98,14 @@ class LinkedList {
 //   return;
 // }
 
-const addToEnd = (newValue) => {
-  let newEnd = new Node(newValue);
-  var current = this.head;
-  while (current) {
-    current = current.next
-  }
-   current.next = newEnd;
-}
+// const addToEnd = (newValue) => {
+//   let newEnd = new Node(newValue);
+//   var current = this.head;
+//   while (current) {
+//     current = current.next
+//   }
+//    current.next = newEnd;
+// }
 
 
 
