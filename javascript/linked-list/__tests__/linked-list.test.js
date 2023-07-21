@@ -51,11 +51,11 @@ describe('linked list test suite', () => {
       );
     });
   });
-  test("Can succesfully insert afterr a node in the middle of the linked list", () => {
+  test('Can succesfully insert afterr a node in the middle of the linked list', () => {
     const testLLAfter = new LinkedList(dummyLL);
     testLLAfter.insertAfter('c', '2');
     expect(testLLAfter.toString()).toBe(
       ''
-    )
-  })
+    );
+  });
 });
