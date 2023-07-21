@@ -43,5 +43,19 @@ describe('linked list test suite', () => {
     //option 2--------------
     //traverse list
     // if current.next = null return current expect current.value to === the value we inserted
+    test('Can succesfully insert a node before a node located in the middle of a linked list', () => {
+      const testLLBefore = new LinkedList(dummyLL); //instantiate new list every time an option
+      testLLBefore.insertBefore('b", 1');
+      expect(testLLBefore.toString()).toEqual(
+        '{ a } -> { 1 } -> { b } -> { c } -> { d } -> NULL'
+      );
+    });
   });
+  test("Can succesfully insert afterr a node in the middle of the linked list", () => {
+    const testLLAfter = new LinkedList(dummyLL);
+    testLLAfter.insertAfter('c', '2');
+    expect(testLLAfter.toString()).toBe(
+      ''
+    )
+  })
 });

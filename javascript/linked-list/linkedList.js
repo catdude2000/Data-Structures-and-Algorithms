@@ -156,6 +156,7 @@ const insertAfter = (value, newValue) => {
    while (current) {
   if (head === value) {
     current.next = newNode;
+    return;
   } else
     {
       current = current.next
