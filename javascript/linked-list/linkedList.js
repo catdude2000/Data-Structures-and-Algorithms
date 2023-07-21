@@ -93,14 +93,11 @@ class LinkedList {
 // insert after
 // arguments: value, new value
 // adds a new node with the given new value immediately after the first node that has the value specified
-
-
-
-
-
-
-
-
-
+//- assign head to current
+//-check current.value to see if it matches our argument
+//-temp is current.next
+//- current.next is new node
+// -new node.next is temp
+//-return the list
 
 module.exports = { LinkedList, Node };
