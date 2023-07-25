@@ -1,9 +1,11 @@
-# Challenge 6 Linked List Insertions
+# Challenge 7 Linked List kth
 
-Extend a Linked List to allow various insertion methods.
+Write a method to find the value of the node k numbers away from the end of the linked list.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+<!-- Update later! -->
+![whiteboard image](javascript/linked-list/assets/CC7RoughDraftStartWB.png)
 
 ## Approach & Efficiency
 
