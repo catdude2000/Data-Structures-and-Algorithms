@@ -28,5 +28,5 @@ Table of Contents
 4. [Challenge FourNA]()
 5. [Challenge Five](javascript/linked-list/README.md)
 6. [Challenge Six](javascript/linked-list/linked-list-insertions/README.md)
-7. [Challenge Seven](javascript/)
+7. [Challenge Seven](javascript/linked-list/linked-list-kth/README.md)
 8. [Challenge Eight](javascript/)
