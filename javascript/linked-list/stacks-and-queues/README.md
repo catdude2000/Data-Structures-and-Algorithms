@@ -1,6 +1,5 @@
 # Challenge 10 Stacks and Queues
 
-
 ## Whiteboard Process
 
 ![whiteboard image](javascript/)
