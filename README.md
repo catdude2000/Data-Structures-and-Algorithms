@@ -29,4 +29,6 @@ Table of Contents
 5. [Challenge Five](javascript/linked-list/README.md)
 6. [Challenge Six](javascript/)
 7. [Challenge Seven](javascript/)
-8. [Challenge Eight](javascript/)
+8. [Challenge Eight](javascript/linked-list/linked-list-zip/README.md)
+9. [Challenge Nine](javascript/)
+10. [Challenge Ten](javascript/linked-list/stacks-and-queues/README.md)
