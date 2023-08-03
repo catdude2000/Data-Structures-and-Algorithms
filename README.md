@@ -24,9 +24,9 @@ Table of Contents
 
 1. [Challenge One](javascript/old401/CC401Class01/README.md)
 2. [Challenge Two](javascript/old401/CC401Class02/README.md)
-3. [Challenge Three](javascript/)
-4. [Challenge Four](javascript/)
-5. [Challenge Five](javascript/)
+3. [Challenge Three](javascript/old401/CC401Class03/README.md)
+4. [Challenge FourNA]()
+5. [Challenge Five](javascript/linked-list/README.md)
 6. [Challenge Six](javascript/)
 7. [Challenge Seven](javascript/)
 8. [Challenge Eight](javascript/linked-list/linked-list-zip/README.md)
