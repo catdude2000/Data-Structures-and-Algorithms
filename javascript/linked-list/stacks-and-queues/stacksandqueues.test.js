@@ -34,8 +34,8 @@ describe('Stacks and Queues', () => {
     expect(testStack.peek()).toEqual('dummyNode');
   });
   test('Can successfully instantiate an empty stack', () => {
-    const testStack = new Stack(new Node());
-    expect(testStack.isEmpty()).toEqual(null);
+    const testStack = new Stack();
+    expect(testStack.isEmpty()).toEqual(true);
   });
   test('Calling pop or peek on empty stack raises exception', () => {
     const emptyStack = new Stack();
@@ -72,11 +72,11 @@ describe('Stacks and Queues', () => {
     testQueue.enqueue('dummyNodeQueuer2');
     testQueue.dequeue('dummyNodeQueuer');
     testQueue.dequeue('dummyNodeQueuer2');
-    expect(testQueue.isEmpty()).toEqual(null);
+    expect(testQueue.isEmpty()).toEqual(true);
   });
   test('Can successfully instantiate an empty queue', () => {
     const testQueue = new Queue();
-    expect(testQueue.isEmpty()).toEqual(null);
+    expect(testQueue.isEmpty()).toEqual(true);
   });
   test('Calling dequeue or peek on empty queue raises exception', () => {
     const testQueue = new Queue();

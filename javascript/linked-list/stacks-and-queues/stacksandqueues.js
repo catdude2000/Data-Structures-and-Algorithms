@@ -33,7 +33,9 @@ class Stack {
     return this.top.value;
   }
   isEmpty() {
-    return this.top = null;
+    if (!this.top) {
+      return true; } else {
+      return false; }
   }
 }
 
@@ -68,7 +70,10 @@ class Queue {
     }
   }
   isEmpty() {
-    return this.front = null;
+    if (!this.front) {
+      return true; } else {
+      return false;
+    }
   }
 }
 
