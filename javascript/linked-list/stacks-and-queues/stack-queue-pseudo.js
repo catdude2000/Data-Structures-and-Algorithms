@@ -2,7 +2,6 @@
 
 const { Node, Stack } = require('./stacksandqueues');
 
-
 class PsuedoQueue {
   constructor(value, next = null) {
     this.value = value;
@@ -10,36 +9,29 @@ class PsuedoQueue {
     this.s1 = new Stack();
     this.s2 = new Stack();
   }
-  enqueue(value) { //O(1) time
+
+  enqueue(value) {
+    let node = new Node(value);
     while (this.s1.top !== null)
     {
       this.s2.push(this.s1.pop());
     }
-    this.s1.push(value);
+    this.s1.push(node);
     while (this.s2.top !== null)
     {
       this.s1.push(this.s2.pop());
     }
   }
-
-  //   let node = new Node(value);
-  //   let stack1 = new Stack(node);
-  //   let queueStack = stack1.pop
-  //   if (this.front) {
-  //     this.rear.next = node;
-  //   } else {
-  //     this.front = node;
-  //   }
-  //   this.rear = node;
-  // }
   dequeue() {
-    if (!this.front) {
+    if (!this.s1.top) {
       return null;
-    } else { let temp = this.front;
-      this.front = this.front.next;
-      temp.next = null;
-      return temp.value;
     }
+    let x = this.s1.top;
+    this.s1.pop();
+    return x;
   }
 }
+
  // https://www.geeksforgeeks.org/queue-using-stacks/
+
+module.exports = {PsuedoQueue};
