@@ -3,7 +3,8 @@ const { BinaryTree, BinarySearchTree, BTNode } = require('./trees'); // Import y
 describe('BinaryTree', () => {
   it('should correctly insert a node', () => {
     const tree = new BinaryTree();
-    tree.push(5);
+    const tNode = new BTNode(5);
+    tree.add(tNode);
     // Write assertions to check if the node was inserted correctly
   });
 
@@ -13,7 +14,7 @@ describe('BinaryTree', () => {
 describe('BinarySearchTree', () => {
   it('should correctly insert a node', () => {
     const tree = new BinarySearchTree();
-    tree.insert(5);
+    tree.add(5);
     // Write assertions to check if the node was inserted correctly
   });
 
