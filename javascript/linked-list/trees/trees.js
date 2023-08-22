@@ -63,4 +63,4 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-export.modules = { BinarySearchTree, BTNode }
+module.exports = { BinarySearchTree, BTNode };
