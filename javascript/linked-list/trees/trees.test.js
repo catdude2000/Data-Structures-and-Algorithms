@@ -1,4 +1,4 @@
-const {  BinarySearchTree, BTNode } = require('./trees'); // Import your classes
+const { BinarySearchTree, BTNode } = require('./trees'); // Import your classes
 
 describe('BinarySearchTree', () => {
   it('should correctly insert a node', () => {
