@@ -1,15 +1,4 @@
-const { BinaryTree, BinarySearchTree, BTNode } = require('./trees'); // Import your classes
-
-describe('BinaryTree', () => {
-  it('should correctly insert a node', () => {
-    const tree = new BinaryTree();
-    const tNode = new BTNode(5);
-    tree.add(tNode);
-    // Write assertions to check if the node was inserted correctly
-  });
-
-  // Add more test cases for other BinaryTree methods
-});
+const {  BinarySearchTree, BTNode } = require('./trees'); // Import your classes
 
 describe('BinarySearchTree', () => {
   it('should correctly insert a node', () => {
