@@ -12,7 +12,7 @@ class BinaryTree {
   constructor(root = null) {
     this.root = root;
   }
-  preOrder() {
+  preOrder(node) {
     // could do anything but we're just logging
     console.log(node.value);
     // go left
@@ -63,4 +63,4 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-module.exports = { BinarySearchTree, BTNode };
+module.exports = { BinarySearchTree, BinaryTree, BTNode };
