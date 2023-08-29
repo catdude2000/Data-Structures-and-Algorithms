@@ -10,4 +10,4 @@ Used the readings to make methods for stacks and queues, used that logic to writ
 
 ## Solution
 
-npm test
+npm test stacksandqueues
