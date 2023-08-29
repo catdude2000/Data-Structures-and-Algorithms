@@ -1,5 +1,12 @@
 'use strict';
 
+class Node {
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
 class BTNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -33,30 +40,31 @@ class Queue {
   }
 }
 
-
-const breadthFirstTraversal = (root) => {
+const breadthFirst = (root) => {
   if (!root) {
     return null;
   }
   const result = [];
   const queue = new Queue();
-  while (queue.length > 0) {
-    const node = new BTNode(root);
-    result.push(node.value);
-    queue.enqueue(node.value);
-    if (node.left) {
-      result.push(node.right);
-      queue.enqueue(node.left);
+  queue.enqueue(root);
+  console.log(root, 'root');
+  while (queue.front) {
+    result.push(queue.front.value.value);
+    console.log(queue.front, 'queue.front');
+    if (queue.front.value.left) {
+      console.log(queue.front.value.left, 'leftqueuenode');
+      queue.enqueue(queue.front.value.left);
     }
-    if (node.right) {
-      result.push(node.right);
-      queue.enqueue(node.right);
+    if (queue.front.value.right) {
+      queue.enqueue(queue.front.value.right);
     }
-    queue.dequeue(node.value);
+    queue.dequeue();
+    console.log(queue, 'queue');
   }
+  console.log(result, 'result');
   return result;
 };
 
 
 
-module.exports = { breadthFirstTraversal, BTNode };
+module.exports = { breadthFirst, Queue, Node, BTNode };
