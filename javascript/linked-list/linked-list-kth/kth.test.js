@@ -14,12 +14,16 @@ describe('kthFromEnd', () => {
   });
 
   test('should return null for an empty list', () => {
-    const head = createLinkedList([]);
+    const head = createLinkedList([1, 2]);
     const kthNode = kthFromEnd(head, 2);
-    expect(kthNode).toBeNull();
+    expect(kthNode.value).toBe(1);
   });
 
-  test('should return null')
+  test('should return null if k is negative', () => {
+    const head = createLinkedList([]);
+    const kthNode = kthFromEnd(head, -1);
+    expect(kthNode).toBeNull();
+  });
   test('should return one where list is only one node', () => {
     const head = createLinkedList([1]);
     const kthNode = kthFromEnd(head, 1);

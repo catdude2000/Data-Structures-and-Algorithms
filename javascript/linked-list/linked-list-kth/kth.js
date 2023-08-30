@@ -10,27 +10,23 @@ function kthFromEnd(head, k) {
     return null;
   }
 
-  let slowPoint = head;
-  let fastPoint = head;
+  let slowPointer = head;
+  let fastPointer = head;
 
-  // Move fastPtr k nodes ahead
   for (let i = 0; i < k; i++) {
-    if (!fastPoint) {
-      return null; // List length is less than k
+    if (!fastPointer) {
+      return null;
     }
-    fastPoint = fastPoint.next;
+    fastPointer = fastPointer.next;
   }
 
-  // Move slowPtr and fastPoint together until fastPoint reaches the end
-  while (fastPoint) {
-    slowPoint = slowPoint.next;
-    fastPoint = fastPoint.next;
+  while (fastPointer) {
+    slowPointer = slowPointer.next;
+    fastPointer = fastPointer.next;
   }
-
-  return slowPoint;
+  return slowPointer;
 }
 
-// Helper function to create a linked list from an array of values
 function createLinkedList(values) {
   if (!values || values.length === 0) {
     return null;
@@ -42,20 +38,7 @@ function createLinkedList(values) {
     current.next = new Node(values[i]);
     current = current.next;
   }
-
   return head;
-}
-
-// Example usage
-const values = [1, 2, 3, 4, 5, 6, 7];
-const k = 3;
-const head = createLinkedList(values);
-const kthNode = kthFromEnd(head, k);
-
-if (kthNode) {
-  console.log(`The ${k}th node from the end is: ${kthNode.value}`);
-} else {
-  console.log(`The list is too short to find the ${k}th node from the end.`);
 }
 
 module.exports = { Node, kthFromEnd, createLinkedList };
