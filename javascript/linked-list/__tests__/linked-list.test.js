@@ -32,4 +32,31 @@ describe('linked list test suite', () => {
       '{ 1 } -> { a } -> { b } -> { c } -> NULL'
     );
   });
+  test('append can insert a node at the end of the list', () => {
+    //insert a node then check that the last node of the list matches a value
+    // insert it
+    // compare it to our expected toString value
+    const testLL = new LinkedList(dummyLL);
+    testLL.append('d');
+    expect(testLL.toString()).toEqual(
+      '{ a } -> { b } -> { c } -> { d } -> NULL'
+    );
+  });
+  //option 2--------------
+  //traverse list
+  // if current.next = null return current expect current.value to === the value we inserted
+  test('Can succesfully insert a node before a node located in the middle of a linked list', () => {
+    const testLLBefore = new LinkedList(dummyLL); //instantiate new list every time an option
+    testLLBefore.insertBefore('b', '1');
+    expect(testLLBefore.toString()).toEqual(
+      '{ a } -> { 1 } -> { b } -> { c } -> { d } -> NULL'
+    );
+  });
+});
+test('Can succesfully insert after a node in the middle of the linked list', () => {
+  const testLLAfter = new LinkedList(dummyLL);
+  testLLAfter.insertAfter('c', '2');
+  expect(testLLAfter.toString()).toBe(
+    '{ a } -> { b } -> { c } -> { 2 } -> { d } -> NULL'
+  );
 });
