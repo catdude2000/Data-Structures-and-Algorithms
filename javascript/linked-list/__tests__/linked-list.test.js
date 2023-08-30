@@ -1,5 +1,6 @@
 'use strict';
 
+
 const { LinkedList } = require('../linkedList.js');
 // "{ a } -> { b } -> { c } -> NULL"
 const dummyLL = {
@@ -12,6 +13,7 @@ const dummyLL = {
     },
   },
 };
+
 
 describe('linked list test suite', () => {
   test('toString method returns the node values in the right format', () => {
