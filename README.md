@@ -34,6 +34,8 @@ Table of Contents
 10. [Challenge Ten](javascript/linked-list/stacks-and-queues/README.md)
 11. [Challenge Eleven](javascript/)
 12. [Challenge Twelve](javascript/linked-list/stacks-and-queues/stack-queue-animal-shelter/README.md)
+13. [C](j)
+14. [C](j)
 15. [Challenge Fifteen](javascript/trees/README.md)
 16. [Challenge Sixteen](javascript/trees/treemax/README.md)
 17. [Challenge Seventeen](javascript/trees/tree-breadth-first/README.md)
