@@ -2,7 +2,7 @@
 
 ## Whiteboard Process
 
-![whiteboard image](/javascript/linked-list/tree-breadth-first/CC17WB.png)
+![whiteboard image](/javascript/trees/tree-breadth-first/CC17WB.png)
 
 ## Approach & Efficiency
 
