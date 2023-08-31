@@ -8,4 +8,6 @@
 
 ## Solution
 
+[code](./tree-fizz-buzz.js)
+
 npm test tree-fizz-buzz

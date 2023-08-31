@@ -39,4 +39,4 @@ Table of Contents
 15. [Challenge Fifteen](javascript/trees/README.md)
 16. [Challenge Sixteen](javascript/trees/treemax/README.md)
 17. [Challenge Seventeen](javascript/trees/tree-breadth-first/README.md)
-18. [Challenge Eighteen](javascript/trees/tree-fizz-buzz)
+18. [Challenge Eighteen](javascript/trees/tree-fizz-buzz/README.md)
