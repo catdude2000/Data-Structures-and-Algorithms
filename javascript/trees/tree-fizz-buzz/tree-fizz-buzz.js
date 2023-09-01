@@ -65,3 +65,5 @@ const k = 3; // Change k value accordingly
 
 const fizzBuzzTree = fizzBuzzKaryTree(rootNode, k);
 console.log(fizzBuzzTree);
+
+module.exports = { fizzBuzz, fizzBuzzKaryTree, TreeNode };
