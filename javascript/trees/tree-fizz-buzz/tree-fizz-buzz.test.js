@@ -17,5 +17,9 @@ describe('FizzBuzz K-ary Tree Traversal', () => {
     expect(modifiedTree.value).toBe(7);
     expect(modifiedTree.children[0].value).toBe(11);
   });
-
+  test('empty case', () => {
+    const originalTree = null;
+    const modifiedTree = fizzBuzzKaryTree(originalTree);
+    expect(modifiedTree).toBeNull();
+  });
 });
