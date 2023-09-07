@@ -11,6 +11,11 @@ describe('FizzBuzz K-ary Tree Traversal', () => {
     expect(modifiedTree.children[0].value).toBe('Fizz');
     expect(modifiedTree.children[1].value).toBe('Buzz');
   });
+  test('Should fail', () => {
+    const originalTree = new KaryTreeNode(7, [new KaryTreeNode(11)]);
+    const modifiedTree = fizzBuzzKaryTree(originalTree);
+    expect(modifiedTree.value).toBe(7);
+    expect(modifiedTree.children[0].value).toBe(11);
+  });
 
-  // Add more test cases as needed
 });
