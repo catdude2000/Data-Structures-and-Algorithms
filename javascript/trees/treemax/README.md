@@ -2,7 +2,7 @@
 
 ## Whiteboard Process
 
-![whiteboard image](/javascript/linked-list/)
+![whiteboard image](/javascript/trees/treemax/cc16wb.png)
 
 ## Approach & Efficiency
 
