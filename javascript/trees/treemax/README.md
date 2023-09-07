@@ -6,6 +6,9 @@
 
 ## Approach & Efficiency
 
+time: O(n)
+space: O(1)
+
 ## Solution
 
 npm test treemax
