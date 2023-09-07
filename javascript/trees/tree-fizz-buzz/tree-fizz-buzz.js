@@ -12,58 +12,49 @@
 //     for child in front.children
 //         breadth.enqueue(child)
 
-class TreeNode {
-  constructor(value) {
+class KaryTreeNode {
+  constructor(value, children = []) {
     this.value = value;
-    this.children = [];
+    this.children = children;
   }
 }
 
-function fizzBuzz(value) {
-  if (value % 3 === 0 && value % 5 === 0) {
-    return 'FizzBuzz';
-  } else if (value % 3 === 0) {
-    return 'Fizz';
-  } else if (value % 5 === 0) {
-    return 'Buzz';
-  } else {
-    return value.toString();
-  }
-}
-
-function fizzBuzzKaryTree(root, k) {
-  if (!root) {
-    return [];
-  }
-
-  const result = [];
-  const queue = [{ node: root, level: 0 }];
-
-  while (queue.length > 0) {
-    const { node, level } = queue.shift();
-
-    if (level >= result.length) {
-      result.push([]);
+function fizzBuzzKaryTree(root) {
+  function fizzBuzz(node) {
+    if (node === null) {
+      return null;
     }
 
-    result[level].push(fizzBuzz(node.value));
+    let newValue = '';
+    if (node.value % 3 === 0) {
+      newValue += 'Fizz';
+    }
+    if (node.value % 5 === 0) {
+      newValue += 'Buzz';
+    }
 
+    if (newValue === '') {
+      newValue = node.value;
+    }
+
+    const newChildren = [];
     for (const child of node.children) {
-      queue.push({ node: child, level: level + 1 });
+      newChildren.push(fizzBuzz(child));
     }
+
+    return new KaryTreeNode(newValue, newChildren);
   }
 
-  return result;
+  return fizzBuzz(root);
 }
 
-// Example usage
-const rootNode = new TreeNode(1);
-rootNode.children.push(new TreeNode(2), new TreeNode(3), new TreeNode(4));
-rootNode.children[1].children.push(new TreeNode(5), new TreeNode(6));
+// Example usage:
+// const tree = new KaryTreeNode(15, [
+//   new KaryTreeNode(9, [new KaryTreeNode(6)]),
+//   new KaryTreeNode(10),
+// ]);
 
-const k = 3; // Change k value accordingly
+// const modifiedTree = fizzBuzzKaryTree(tree);
+// console.log(modifiedTree);
 
-const fizzBuzzTree = fizzBuzzKaryTree(rootNode, k);
-console.log(fizzBuzzTree);
-
-module.exports = { fizzBuzz, fizzBuzzKaryTree, TreeNode };
+module.exports = { fizzBuzzKaryTree, KaryTreeNode };
